@@ -1,5 +1,5 @@
 - name: configure frontend server
-  host: frontend
+  hosts: frontend
   become: yes
   tasts:
   - name: install nginx server
@@ -35,7 +35,7 @@
       remote_src: yes #telling it is already in remote
 
   - name: copy expense conf
-    ansible.builtin.copy
+    ansible.builtin.copy:
       src: expense.conf
       dest: /etc/nginx/default.d/expense.conf
 
