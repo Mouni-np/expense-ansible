@@ -4,6 +4,7 @@
   vars:
     mysql_root_password:  ExpenseApp@1
     login_host: mysql.aws-devops.site
+    
   tasks:
   - name: ansible to install pymysql
     ansible.builtin.pip:
